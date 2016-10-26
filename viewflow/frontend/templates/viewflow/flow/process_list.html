@@ -3,7 +3,7 @@
 
 {% block breadcrumbs_items %}
 {% include 'viewflow/includes/breadcrumb_category.html' %}
-<a href="{% flowurl flow_class 'index' %}?{{ request|query_back:'copy' }}">{{ flow_class.process_title }}</a>  &rang;
+<a href="{% flowurl flow_class 'index' %}?{{ request|query_back:'copy' }}">{{ flow_class.process_title }}</a>
 <a class="active">All</a>
 {% endblock %}
 
