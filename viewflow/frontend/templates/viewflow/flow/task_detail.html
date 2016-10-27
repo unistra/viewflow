@@ -1,6 +1,8 @@
 {% extends 'viewflow/flow/base_task.html' %}
 {% load viewflow viewflow_frontend %}
 
+{% block prevbreadcrumb_class %}class='active'{% endblock %}
+
 {% block task_actions %}
 <div class="col s3">&nbsp;
     {% if activation.flow_class.manage_permission_name in perms %}

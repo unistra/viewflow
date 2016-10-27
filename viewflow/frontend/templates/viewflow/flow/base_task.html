@@ -5,7 +5,7 @@
 {% include 'viewflow/includes/breadcrumb_category.html' %}
 <a href="{% flowurl activation.flow_class 'index' %}?{{ request|query_back:'copy' }}">{{ activation.flow_class.process_title }}</a>
 <a href="{% flowurl activation.process 'detail' %}?{{ request|query_back:'copy' }}">#{{ activation.process.pk }}</a>
-<a href="{% flowurl activation.task 'detail' %}?{{ request|query_back:'copy' }}">{{ activation.flow_task }} #{{ activation.task.pk }}</a>
+<a {% block prevbreadcrumb_class %}{% endblock %} href="{% flowurl activation.task 'detail' %}?{{ request|query_back:'copy' }}">{{ activation.flow_task }} #{{ activation.task.pk }}</a>
 {% block breadcrumbs_items_extra %}{% endblock %}
 {% endblock %}
 
