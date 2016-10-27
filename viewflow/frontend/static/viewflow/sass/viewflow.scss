@@ -1,53 +1,83 @@
 /* SIDEBAR */
-.side-nav.fixed .collapsible-body li.active a span.badge {
-  color: white; }
+.side-nav.fixed {
+    .collapsible-body {
+        // 2d level
+        li.active a {
+            span.badge {
+                color: white;
+            }
+        }
+    }
+}
 
 /* LIST PAGE */
 .filters-card {
-  overflow: initial; }
-  .filters-card .card-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 100;
-    margin-top: -10px; }
-  .filters-card .card-content {
-    padding: 20px;
-    padding-top: 10px; }
-  .filters-card a {
-    margin-right: 0; }
-  .filters-card #changelist-search-button {
-    z-index: 1000;
-    position: absolute;
-    right: 15px;
-    top: 15px; }
-    .filters-card #changelist-search-button i.material-icons {
-      font-size: 18px; }
+    overflow:initial;
+
+    .card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-top: -10px;
+    }
+
+    .card-content {
+        padding: 20px;
+        padding-top: 10px;
+    }
+
+    a {
+        margin-right: 0;
+    }
+
+
+    #changelist-search-button {
+        z-index:1000;
+        position:absolute;
+        right:15px;
+        top:15px;
+
+        i.material-icons {
+            font-size: 18px;
+        }
+    }
+}
 
 @media only screen and (min-width: 601px) {
-  .filters-card {
-    margin-left: -10px; } }
+    .filters-card {
+        margin-left: -10px;
+    }
+}
 
 /* DETAIL PAGE */
 .card .card-bend {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  background-color: #4CAF50;
-  color: #fff;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-  text-transform: uppercase; }
-  .card .card-bend.disabled {
-    color: #444;
-    background-color: #e0e0e0; }
-  .card .card-bend h5 {
-    font-size: 0.8rem;
-    line-height: 1rem; }
-  .card .card-bend h6 {
-    font-size: 0.7rem;
-    line-height: 0.3rem; }
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+
+    &.disabled {
+        color: #444;
+        background-color: #e0e0e0;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    h6 {
+        font-size: 0.7rem;
+        line-height: 0.3rem;
+    }
+}
+
 
 /*
 .card {

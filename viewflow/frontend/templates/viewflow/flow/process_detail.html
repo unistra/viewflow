@@ -10,13 +10,13 @@
 {% block content %}
 <div class="row">
     <div class="col s12 m6 l8">
-        <div class="card data-card">
+        <div class="card form-card">
             <div class="card-content">
                 <div class="card-bend center-align {% if process.finished %}disabled{% endif %}">
                     <h5>{{ view.flow_class.process_title }}</h5>
                     <h6>{% if process.finished %}Finished{% else %}in-progresss{% endif %}</h6>
                 </div>
-                <div class="card-title black-text">{{ process.summary }}</div>
+                <div class="form-title">{{ process.summary }}</div>
                 <table class="table bordered">
                     <thead>
                         <th>#</th>
