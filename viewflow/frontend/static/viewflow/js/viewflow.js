@@ -1,4 +1,7 @@
-$(document).on('ready turbolinks:load', function() {
+$(document).on('turbolinks:load', function() {
+  $('.dropdown-button').dropdown()
+  $('.modal').modal();
+  
   $("table.selectable").selectableList({
     checkallSelector: "[data-select-all]",
     onCheck: function(table) {
@@ -29,4 +32,9 @@ $(document).on('ready turbolinks:load', function() {
 
     window.location.href = url;
   });
+
+})
+
+$(document).on('turbolinks:before-cache', function() {
+  $('.dropdown-content').css('display', 'none');
 })

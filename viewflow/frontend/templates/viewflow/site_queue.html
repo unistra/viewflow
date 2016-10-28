@@ -71,9 +71,8 @@
                 </div>
                 {% endif %}
             </div>
-            <div class="card-action row">
-                <div class="col s3">&nbsp;</div>
-                <div class="col s9 right-align">
+            <div class="card-action">
+                <div class="right-align">
                     <a href="{% url 'viewflow:assign'%}?{{ request|query_back:'here' }}" class="btn-flat grey black-text lighten-4 disabled selectable-action">Assign</a>
                 </div>
             </div>

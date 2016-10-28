@@ -14,7 +14,7 @@
                     <thead>
                         <th width="50px">
                             <p>
-                                <input type="checkbox" id="_select_all" data-select-all />
+                                <input type="checkbox" class="filled-in" id="_select_all" data-select-all />
                                 <label for="_select_all">&nbsp;</label>
                             </p>
                         </th>
@@ -30,7 +30,7 @@
                         <tr data-row-id="{{ task.pk }}">
                             <td>
                                 <p>
-                                    <input type="checkbox" id="_row_{{ forloop.counter }}" />
+                                    <input type="checkbox" class="filled-in" id="_row_{{ forloop.counter }}" />
                                     <label for="_row_{{ forloop.counter }}">&nbsp;</label>
                                 </p>
                             </td>
@@ -69,9 +69,8 @@
                 </div>
                 {% endif %}
             </div>
-            <div class="card-action row">
-                <div class="col s3">&nbsp;</div>
-                <div class="col s9 right-align">
+            <div class="card-action">
+                <div class="right-align">
                     <a href="{% url 'viewflow:unassign'%}?{{ request|query_back:'here' }}" class="btn-flat grey black-text lighten-4 disabled selectable-action">Un-Assign</a>
                 </div>
             </div>
