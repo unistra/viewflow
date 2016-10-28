@@ -51,8 +51,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card-action row">
-                <div class="col s12 right-align">
+            <div class="card-action">
+                <div class="right-align">
                     {% if view.flow_class.manage_permission_name in perms %}
                     <a class="btn-flat black-text {% if process.status != 'NEW' %}disabled{% endif %}"
                        href="{% flowurl process 'action_cancel' %}?{{ request|query_back:'copy' }}">Cancel</a>

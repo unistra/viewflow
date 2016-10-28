@@ -1,3 +1,19 @@
+main .row .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.data-card {
+    overflow:initial;
+
+    .card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-top: -10px;
+    }
+}
+
 /* SIDEBAR */
 .side-nav.fixed {
     .collapsible-body {
@@ -44,12 +60,33 @@
 }
 
 @media only screen and (min-width: 601px) {
-    .filters-card {
+    .detail-card, .filters-card {
         margin-left: -10px;
     }
 }
 
 /* DETAIL PAGE */
+.detail-card {
+    overflow:initial;
+    margin-bottom: 5px;
+
+    .card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-top: -10px;
+    }
+
+    .card-content {
+        padding: 20px;
+        padding-top: 10px;
+    }
+
+    a {
+        margin-right: 0;
+    }
+}
+
 .card .card-bend {
     position: absolute;
     right: 0px;
@@ -78,7 +115,26 @@
     }
 }
 
+table span.badge {
+    position: relative;
+    right: auto;
+    display: inline-block;
+    width: 60px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #26a69a;
+    border-radius: 2px;
+    text-transform: uppercase
+}
 
+.card.data-card .card-content table span.badge.badge-high {
+    background-color: #F44336;
+}
+
+.card.data-card .card-content table span.badge.badge-low {
+    background-color: #616161;
+}
 /*
 .card {
     overflow: visible;
