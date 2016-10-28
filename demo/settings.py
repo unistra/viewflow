@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'demo.customnode',
     'demo.helloworld',
-    'demo.shipment',
+    # 'demo.shipment',
 )
 
 MIDDLEWARE_CLASSES = (
