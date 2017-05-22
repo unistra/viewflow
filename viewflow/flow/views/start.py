@@ -44,7 +44,7 @@ class StartFlowMixin(MessageUserMixin, BaseStartFlowMixin):
     def activation_done(self, *args, **kwargs):
         """Finish activation."""
         self.activation.done()
-        self.success('Process {process} has been started.')
+        self.success(_('Process {process} has been started.'))
 
     def form_valid(self, *args, **kwargs):
         super(StartFlowMixin, self).form_valid(*args, **kwargs)

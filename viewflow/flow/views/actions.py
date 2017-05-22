@@ -77,7 +77,7 @@ class UndoTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
 
     def perform(self):
         self.activation.undo()
-        self.success('Task {task} has been undone.')
+        self.success(_('Task {task} has been undone.'))
 
 
 class CancelTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
@@ -88,7 +88,7 @@ class CancelTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
 
     def perform(self):
         self.activation.cancel()
-        self.success('Task {task} has been canceled.')
+        self.success(_('Task {task} has been canceled.'))
 
 
 class PerformTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
@@ -101,7 +101,7 @@ class PerformTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
 
     def perform(self):
         self.activation.perform()
-        self.error('Task {task} has been executed.')
+        self.error(_('Task {task} has been executed.'))
 
 
 class ActivateNextTaskView(FlowTaskManagePermissionMixin, BaseTaskActionView):
@@ -168,7 +168,7 @@ class CancelProcessView(FlowManagePermissionMixin, generic.DetailView):
         elif '_cancel_process' in request.POST:
             self._cancel_active_tasks()
             self._cancel_process()
-            self.success('Process {process} has been canceled.')
+            self.success(_('Process {process} has been canceled.'))
             return HttpResponseRedirect(self.get_success_url())
         else:
             return self.get(request, *args, **kwargs)

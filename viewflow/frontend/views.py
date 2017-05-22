@@ -84,7 +84,7 @@ class TasksUnAssignView(BaseTasksActionView):
             with lock(task.process.flow_class, task.process_id):
                 activation = task.activate()
                 activation.unassign()
-        self.success('Tasks {tasks} has been unassigned.')
+        self.success(_('Tasks {tasks} has been unassigned.'))
         return HttpResponseRedirect(self.get_success_url())
 
 
@@ -102,5 +102,5 @@ class TasksAssignView(BaseTasksActionView):
                 activation = task.activate()
                 activation.assign(self.request.user)
 
-        self.success('Tasks {tasks} has been assigned.')
+        self.success(_('Tasks {tasks} has been assigned.'))
         return HttpResponseRedirect(self.get_success_url())

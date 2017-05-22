@@ -56,9 +56,9 @@ class FlowViewMixin(MessageUserMixin, BaseFlowViewMixin):
     def activation_done(self, *args, **kwargs):
         """Finish activation."""
         self.activation.done()
-        self.success('Task {task} has been completed.')
+        self.success(_('Task {task} has been completed.'))
         if self.activation.process.finished:
-            self.success('Process {process} has been completed.')
+            self.success(_('Process {process} has been completed.'))
 
     def form_valid(self, *args, **kwargs):
         super(FlowViewMixin, self).form_valid(*args, **kwargs)
@@ -122,7 +122,7 @@ class AssignTaskView(MessageUserMixin, generic.TemplateView):
     def post(self, request, *args, **kwargs):
         if '_assign' or '_continue' in request.POST:
             self.activation.assign(self.request.user)
-            self.success('Task {task} has been assigned')
+            self.success(_('Task {task} has been assigned'))
             return HttpResponseRedirect(self.get_success_url())
         else:
             return self.get(request, *args, **kwargs)
@@ -156,4 +156,4 @@ class UnassignTaskView(BaseTaskActionView):
 
     def perform(self):
         self.activation.unassign()
-        self.success('Task {task} has been unassigned.')
+        self.success(_('Task {task} has been unassigned.'))
