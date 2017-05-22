@@ -1,3 +1,4 @@
+from django.utils.translation import ugettext_lazy as _
 from django.views import generic
 from django.http import HttpResponseRedirect
 

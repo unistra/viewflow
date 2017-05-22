@@ -1,4 +1,5 @@
 from django.utils.six.moves.urllib.parse import quote as urlquote
+from django.utils.translation import ugettext_lazy as _
 
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect

@@ -13,6 +13,8 @@ with FlowTest(RestrictedUserFlow) as flow_test:
     flow_test.User('aaa').Task(Flow.confirm).Execute({'confirm': 1})
 
 """
+
+from django.utils.translation import ugettext_lazy as _
 import inspect
 try:
     from functools import singledispatch
