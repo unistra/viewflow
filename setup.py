@@ -32,7 +32,9 @@ setup(
         'mock',
         # viewflow.test
         'django-webtest',
+        'dj-database-url',
         'webtest'
+        'celery'
     ],
     packages=['viewflow',
               'viewflow.contrib',
