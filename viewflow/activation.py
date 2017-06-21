@@ -6,7 +6,7 @@ from contextlib import contextmanager
 
 from django.db import transaction
 from django.utils.timezone import now
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_noop as _
 
 from . import fsm, signals
 
