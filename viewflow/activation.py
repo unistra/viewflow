@@ -6,20 +6,21 @@ from contextlib import contextmanager
 
 from django.db import transaction
 from django.utils.timezone import now
+from django.utils.translation import ugettext_lazy as _
 
 from . import fsm, signals
 
 
 class STATUS(object):
-    ASSIGNED = 'ASSIGNED'
-    CANCELED = 'CANCELED'
-    DONE = 'DONE'
-    ERROR = 'ERROR'
-    NEW = 'NEW'
-    PREPARED = 'PREPARED'
-    SCHEDULED = 'SCHEDULED'
-    STARTED = 'STARTED'
-    UNRIPE = 'UNRIPE'
+    ASSIGNED = _('ASSIGNED')
+    CANCELED = _('CANCELED')
+    DONE = _('DONE')
+    ERROR = _('ERROR')
+    NEW = _('NEW')
+    PREPARED = _('PREPARED')
+    SCHEDULED = _('SCHEDULED')
+    STARTED = _('STARTED')
+    UNRIPE = _('UNRIPE')
 
 
 _context_stack = threading.local()
